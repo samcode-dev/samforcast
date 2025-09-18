@@ -52,7 +52,7 @@ app.get('/weather', (req, res) => {
         }else {
                 const locaname = req.query.address
                 // console.log(locaname)
-                const url = `http://api.openweathermap.org/data/2.5/weather?q=${locaname}&APPID=f9fb7fd69d0956edbb240180abdc359b`
+                const url = `https://api.openweathermap.org/data/2.5/weather?q=${locaname}&APPID=f9fb7fd69d0956edbb240180abdc359b`
                 request({url: url, json: true}, (error, response) => {
                     res.send({
                         forecast: response.body.weather[0].description,

@@ -13,11 +13,11 @@ button.addEventListener('click', () => {
     msg1.textContent = 'Loading.....'
     msg2.textContent = ''
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${locate}&APPID=f9fb7fd69d0956edbb240180abdc359b`).then((response) => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&APPID=f9fb7fd69d0956edbb240180abdc359b`).then((response) => {
         response.json().then((data) => {
             const iconcode = data.weather[0].icon
             // console.log(data)
-            const iconurl = `http://openweathermap.org/img/w/${iconcode}.png`
+            const iconurl = `https://openweathermap.org/img/w/${iconcode}.png`
             icon.setAttribute("src", iconurl)
             icon.setAttribute("alt", "weather icon")
             icon.style.visibility = 'visible'
